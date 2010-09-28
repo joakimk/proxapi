@@ -9,7 +9,7 @@ class Proxmox
   end
   
   def self.api_key
-    File.read("#{ENV['HOME']}/.proxapi.key")
+    File.read("#{ENV['HOME']}/.proxapi.key").chomp
   end
   
   def self.valid_key?(params)
